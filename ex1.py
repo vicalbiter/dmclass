@@ -108,8 +108,8 @@ def getSumOfAllScores(data):
         id_scores.append(total_score)
     return id_scores
 
-def getAllScores(training_data, test_data):
-    scores = getAllScoresFromFeatures(training_data)
+def getAllScores(training_data, test_data, all_data):
+    scores = getAllScoresFromFeatures(training_data, all_data)
     id_scores = {}
     new_data = []
     for id in range(len(test_data)):
@@ -123,18 +123,18 @@ def getAllScores(training_data, test_data):
         new_data.append(id_scores)
     return new_data
 
-def getAllScoresFromFeatures(data):
-    features = getFeatures(data)
+def getAllScoresFromFeatures(training_data, all_data):
+    features = getFeatures(training_data)
     scores = {}
     for feature in features:
-        scores[feature] = getScoresFromFeature(feature, data)
+        scores[feature] = getScoresFromFeature(feature, training_data, all_data)
     return scores
 
-def getScoresFromFeature(feature, data):
-    categories = getCategories(feature, data)
+def getScoresFromFeature(feature, training_data, all_data):
+    categories = getCategories(feature, all_data)
     scores = {}
     for category in range(categories[0], categories[1] + 1):
-        scores[category] = getScore(feature, category, data)
+        scores[category] = getScore(feature, category, training_data)
     return scores
 
 def getScore(feature, category, data):
@@ -152,3 +152,4 @@ def getScore(feature, category, data):
 
 training_data = readDataFromCSV('tic_training.csv')
 test_data = readDataFromCSV('tic_test.csv')
+all_data = readDataFromCSV('all_data.csv')
