@@ -77,9 +77,10 @@ def getAllEpsilons(data):
 
 def getEpsilonsFromFeature(feature, data):
     categories = getCategories(feature, data)
+    beta = categories[1] - categories[0]
     epsilons = {}
     for category in range(categories[0], categories[1] + 1):
-        epsilons[category] = getEpsilon(feature, category, data)
+        epsilons[category] = getSmoothedEpsilon(feature, category, data, beta)
     return epsilons
 
 def getEpsilon(feature, category, data):
@@ -94,6 +95,16 @@ def getEpsilon(feature, category, data):
     else:
         epsilon = 0
     #print 'Epsilon :' + str(epsilon)
+    return epsilon
+
+def getSmoothedEpsilon(feature, category, data, beta):
+    n = len(data)
+    nx = getNX(feature, category, data)
+    nc = getNX('CARAVAN', 1, data)
+    ncx = getNCX(feature, category, 'CARAVAN', 1, data)
+    pc = nc / float(n)
+    pcx = (ncx + 1) / (float(nx) + beta)
+    epsilon = (nx + 1) * (pcx - pc) / math.sqrt((nx + 1) * pc * (1 - pc))
     return epsilon
 
 def getSumOfAllScores(data):
