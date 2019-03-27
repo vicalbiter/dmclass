@@ -48,6 +48,11 @@ def getCategories(feature, data):
             mincount = current
     return mincount, maxcount
 
+def getCategoriesT(feature, data):
+    cat_dict = {}
+    for id in range(len(data)):
+        current = int(data[id][feature])
+
 
 def getNX(feature, category, data):
     count = 0
@@ -80,7 +85,7 @@ def getEpsilonsFromFeature(feature, data):
     beta = categories[1] - categories[0]
     epsilons = {}
     for category in range(categories[0], categories[1] + 1):
-        epsilons[category] = getSmoothedEpsilon(feature, category, data, beta)
+        epsilons[category] = getEpsilon(feature, category, data)
     return epsilons
 
 def getEpsilon(feature, category, data):
@@ -97,14 +102,15 @@ def getEpsilon(feature, category, data):
     #print 'Epsilon :' + str(epsilon)
     return epsilon
 
+# Get a smoothed epsilon by using a Laplace Estimator with alpha = 1, beta = |C|
 def getSmoothedEpsilon(feature, category, data, beta):
     n = len(data)
-    nx = getNX(feature, category, data)
+    nx = getNX(feature, category, data) + beta
     nc = getNX('CARAVAN', 1, data)
-    ncx = getNCX(feature, category, 'CARAVAN', 1, data)
+    ncx = getNCX(feature, category, 'CARAVAN', 1, data) + 1
     pc = nc / float(n)
-    pcx = (ncx + 1) / (float(nx) + beta)
-    epsilon = (nx + 1) * (pcx - pc) / math.sqrt((nx + 1) * pc * (1 - pc))
+    pcx = ncx / float(nx)
+    epsilon = nx * (pcx - pc) / math.sqrt(nx * pc * (1 - pc))
     return epsilon
 
 def getSumOfAllScores(data):
@@ -119,8 +125,8 @@ def getSumOfAllScores(data):
         id_scores.append(total_score)
     return id_scores
 
-def getAllScores(training_data, test_data, all_data):
-    scores = getAllScoresFromFeatures(training_data, all_data)
+def getAllScores(training_data, test_data, all_data, smoothing):
+    scores = getAllScoresFromFeatures(training_data, all_data, smoothing)
     id_scores = {}
     new_data = []
     for id in range(len(test_data)):
@@ -134,18 +140,23 @@ def getAllScores(training_data, test_data, all_data):
         new_data.append(id_scores)
     return new_data
 
-def getAllScoresFromFeatures(training_data, all_data):
+def getAllScoresFromFeatures(training_data, all_data, smoothing):
     features = getFeatures(training_data)
     scores = {}
     for feature in features:
-        scores[feature] = getScoresFromFeature(feature, training_data, all_data)
+        scores[feature] = getScoresFromFeature(feature, training_data, all_data, smoothing)
     return scores
 
-def getScoresFromFeature(feature, training_data, all_data):
+def getScoresFromFeature(feature, training_data, all_data, smoothing):
     categories = getCategories(feature, all_data)
+    beta = categories[1] - categories[0]
     scores = {}
-    for category in range(categories[0], categories[1] + 1):
-        scores[category] = getScore(feature, category, training_data)
+    if smoothing == 0:
+        for category in range(categories[0], categories[1] + 1):
+            scores[category] = getScore(feature, category, training_data)
+    elif smoothing == 1:
+        for category in range(categories[0], categories[1] + 1):
+            scores[category] = getSmoothedScore(feature, category, training_data, beta)
     return scores
 
 def getScore(feature, category, data):
@@ -159,6 +170,16 @@ def getScore(feature, category, data):
         score = math.log(pxc/pxnc)
     else:
         score = 0
+    return score
+
+def getSmoothedScore(feature, category, data, beta):
+    n = len(data)
+    nx = getNX(feature, category, data)
+    nc = getNX('CARAVAN', 1, data)
+    ncx = getNCX(feature, category, 'CARAVAN', 1, data)
+    pxc = (ncx + 1) / (float(nc) + beta)
+    pxnc = (nx - ncx + 1) / float(n - nc + beta)
+    score = math.log(pxc/pxnc)
     return score
 
 training_data = readDataFromCSV('tic_training.csv')
