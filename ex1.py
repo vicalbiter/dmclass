@@ -23,6 +23,15 @@ def writeDictDataToCSV(filename, dict):
         for row in dict:
             writer.writerow(row)
 
+def writeCompleteDictDataToCSV(filename, dict):
+    csv_columns = getAllFeatures(dict)
+    csv_columns.append('CARAVAN')
+    with open(filename, 'w') as file:
+        writer = csv.DictWriter(file, fieldnames = csv_columns)
+        writer.writeheader()
+        for row in dict:
+            writer.writerow(row)
+
 def getAllFeatures(data):
     features = []
     for feature in data[0]:
@@ -112,6 +121,21 @@ def getSmoothedEpsilon(feature, category, data, beta):
     pcx = ncx / float(nx)
     epsilon = nx * (pcx - pc) / math.sqrt(nx * pc * (1 - pc))
     return epsilon
+
+def getScoresFromFeatures(feature_list, training_data, test_data, all_data, smoothing):
+    scores = getAllScoresFromFeatures(training_data, all_data, smoothing)
+    id_scores = {}
+    new_data = []
+    for id in range(len(test_data)):
+        id_scores = {}
+        for feature in test_data[id].keys():
+            if feature in feature_list:
+                category = int(test_data[id][feature])
+                id_scores[feature] = scores[feature][category]
+        id_scores['NID'] = test_data[id]['NID']
+        id_scores['CARAVAN'] = test_data[id]['CARAVAN']
+        new_data.append(id_scores)
+    return new_data
 
 def getSumOfAllScores(data):
     scores = getAllScoresFromFeatures(data)
