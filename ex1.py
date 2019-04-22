@@ -209,3 +209,14 @@ def getSmoothedScore(feature, category, data, beta):
 training_data = readDataFromCSV('tic_training.csv')
 test_data = readDataFromCSV('tic_test.csv')
 all_data = readDataFromCSV('all_data.csv')
+
+fl = ["PPERSAUT", "PBRAND", "APLEZIER", "MKOOPKLA", "MOSTYPE", "MOSHOOFD",
+"APERSAUT", "PWAPART", "AWAPART", "ABYSTAND", "MHHUUR", "MHKOOP", "PPLEZIER"]
+scores_nsm = getScoresFromFeatures(fl, training_data, training_data, all_data, 0)
+scores_sm = getScoresFromFeatures(fl, training_data, training_data, all_data, 1)
+writeCompleteDictDataToCSV('scores_trainingset_15F_nsm.csv', scores_nsm)
+writeCompleteDictDataToCSV('scores_trainingset_15F_sm.csv', scores_sm)
+scores_nsm = getScoresFromFeatures(fl, training_data, test_data, all_data, 0)
+scores_sm = getScoresFromFeatures(fl, training_data, test_data, all_data, 1)
+writeCompleteDictDataToCSV('scores_testset_15F_nsm.csv', scores_nsm)
+writeCompleteDictDataToCSV('scores_testset_15F_sm.csv', scores_sm)
