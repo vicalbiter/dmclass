@@ -1,0 +1,106 @@
+GEN,SNP,,MA,MAF,,,,
+ADIPOQ,rs1501299,G276 T,T,31%,*,C,,
+ADIPOQ,rs17300539,-11391 G/A,A,5%,*,C,,
+ADIPOQ,rs2241766,T45 G,G,14%,*,C,,
+ADIPOQ,rs266729,-11377 C/G,G,32%,*,C,,
+ADRB1,rs1801253,Arg389Gly,G,20%,,,,
+ADRB2,rs1042713,Arg16Gly,A,50%,,,,
+ADRB2,rs1042714,Gln27Glu,G,14%,,,,
+ADRB3,rs4994,Trp64Arg,G,14%,*,C,,
+BCDIN3/FAIM2,rs7138803,,A,26%,*,G,1ra gen GWAS,"Thorleifsson G, et al. Nat Genet, 2009."
+BDNF,rs6265,,T,20%,*,G,1ra gen GWAS,"Thorleifsson G, et al. Nat Genet, 2009."
+BDNF,rs925946,,T,21%,*,G,1ra gen GWAS,"Thorleifsson G, et al. Nat Genet, 2009."
+CADM2,rs13078807,,G,8%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+CTNNBL1,rs6013029,,T,4%,*,G,1ra gen GWAs,"Liu, YJ, et al. Hum Mol Genet, 2008."
+ELOVL2,rs3734398,,T,32%,,,CANDELA,
+EPN2,rs1027872,,A,20%,,,CANDELA,
+FAM81A,rs17302400,,T,38%,,,CANDELA,
+ETV5,rs9816226,,,,,,,
+FANCL,rs887912,,T,11%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+FLJ35779,rs2112347,,G,34%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+FTO,rs8050136,,A,20%,*,G,1ra gen GWAS,"Thorleifsson G, et al. Nat Genet, 2009."
+FTO,rs9939609,,A,21%,**,G,1ra gen GWAS,"Dina C, et al. Nat Genet, 2007; Frayling TM, et al. Science 2007; Willer CJ. Nat Genet, 2009."
+GLP-1 ,rs6923761,,A,14%,,,,
+GNB3,rs5443,,T,39%,*,,,
+GNPDA2,rs10938397,,G,34%,*,G,1ra gen GWAS,"Willer CJ, et al. Nat Genet, 2009."
+GPRC5B,rs12444979,,,,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+IL1-b,rs1143634,C3953T,A,11%,,,,
+INSIG2,rs7566605,,C,39%,*,G,GWAS,"Herbert A, et al. Science, 2006."
+IRISIN,rs16835198,,T,45%,,,,"Staiger H, et al. Plos One, 2013."
+IRISIN,rs726344,,A,23%,,,,"Staiger H, et al. Plos One, 2013."
+IRS1,rs2943650,,,,,,GWAS,"Kilpeläinen TO, et al. Nat Genet, 2011."
+KCTD15,rs11084753,,A,29%,*,G,1ra gen GWAS,"Willer CJ, et al. Nat Genet, 2009"
+KCTD15,rs29941,,A,40%,*,G,1ra gen GWAS,"Thorleifsson G, et al. Nat Genet, 2009."
+LEP,rs2167270,A19G,G,47%,*,,,
+LEP,rs7799039,G2548A,A,36%,*,,,
+LEPR,rs1137100,Lys109Arg,G,32%,*,,,
+LEPR,rs1137101,Gln223Arg,G,48%,*,,,
+LMX1B,rs867559,,G,37%,,,3ra gen GWAS,"Speliotes, et al. Nat Genet, 2010."
+LOC101929072/HLA-B,rs7775117,,A,19%,,,CANDELA,
+LOC284757,rs6027281,,C,13%,,,,
+LRP1B,rs2890652,,C,6%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+LRRNGC,rs10968576,,G,30%,,,3ra gen GWAS,"Speliotes, et al. Nat Genet, 2010."
+LYPLAL1,rs2605100,,A,37%,,,3ra gen GWAS,"Lindgren CM, et al. Plos Genet, 2009."
+MAF,rs1424233,,C,27%,*,G,2da gen GWAS,"Meyre D, et al. Nat Genet, 2009."
+MAP2K5,rs2241423,,G,40%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+MC4R,rs12970134,,A,21%,,,1ra gen GWAS,"Thorleifsson G, et al. Nat Genet, 2009."
+MC4R,rs17782313,,C,14%,*,G,1ra gen GWAS,"Loos RJ, et al. Nat Genet, 2008; Willer CJ, et al. Nat Genet, 2009."
+MSRA,rs7826222,,G,35%,,,3ra gen GWAS,"Lindgren CM, et al. Plos Genet, 2009."
+MTCH2,rs10838738,,G,42%,*,G,1ra gen GWAS,"Willer CJ, et al. Nat Genet, 2009."
+MTIF3,rs4771122,,G,14%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+"NCR3, AIF1, BAT2",rs2844479,,,,,,1ra gen GWAS,"Thorleifsson G, et al. Nat Genet, 2009."
+NEGR1,rs2568958,,G,30%,,,1ra gen GWAS,"Thorleifsson G, et al. Nat Genet, 2009."
+NEGR1,rs2815752,,G,30%,*,G,1ra gen GWAS,"Willer CJ, et al. Nat Genet, 2009."
+NPC1,rs1805081,,C,18%,*,G,2da gen GWAS,"Meyre D, et al. Nat Genet, 2009."
+NRXN3,rs10146997,,G,18%,,,GWAS,"Heard-Costa NL, et al. Plos Genet, 2009."
+NRXN3,rs10150332,,C,17%,,,3ra gen GWAS,"Speliotes, et al. Nat Genet, 2010"
+NUDT3,rs206936,,A,38%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+PB 116291483,rs975351,,T,33%,,,FAMIIAS,
+PB 67579816,rs614080,,A,28%,,,FAMILIAS,
+PPARG,rs3856806,,T,11%,,,,
+PRKD1,rs11847697,,T,7%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+PRL,rs4712652,,G,26%,*,G,2da gen GWAS,"Meyre D, et al. Nat Genet, 2009."
+PSCK1,rs6232,,C,1%,*,G,,
+PSCK1,rs6235,,G,21%,*,G,,
+PTBP2,rs1555543,,A,42%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+PTER,rs10508503,,T,4%,*,G,2da gen GWAS,"Meyre D, et al. Nat Genet, 2009."
+QPCTL,rs2287019,,T,8%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+RBJ,rs713586,,C,37%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+RNF219-AS1,rs9546651,,T,46%,,,CANDELA,
+RP3-522P13.3,rs2328848,,G,48%,,,CANDELA,
+RPGRIP1L,rs6499640,,A,36%,,,1ra gen GWAS,"Thorleifsson G, et al. Nat Genet, 2009."
+RPL27A,rs4929949,,T,42%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+SDCCAG8,rs10926984,,G,10%,,,GWAS,"Sherag A, et al. Plos Genet, 2010. "
+SEC16/RASAL2,rs10913469,,C,9%,*,G,1ra gen GWAS,"Thorleifsson G, et al. Nat Genet, 2009."
+SFRS10/ETV5/DGKG,rs7647305,,T,16%,*,G,1ra gen GWAS,"Thorleifsson G, et al. Nat Genet, 2009."
+SH2B1/ATP2A1,rs7359397,,T,43%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+SH2B1/ATP2A1,rs7498665,,G,43%,*,G,1ra gen GWAS,"Willer CJ, et al. Nat Genet, 2009; Thorleifsson G, et al. Nat Genet, 2009."
+SIM1,rs3734354,,T,23%,,,,"Ghoussaini M, et al. Obesity, 2010."
+SLC39A8,rs13107325,,,,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+SVOP,rs10778660,,T,41%,,,CANDELA,
+TFAP2B,rs987237,,G,42%,,,3ra gen GWAs,"Lindgren CM, et al. Plos Genet, 2009; Speliotes, et al. Nat Genet, 2010."
+TMEM160,rs3810291,,A,46%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+TMEM18,rs6548238,,T,11%,**,G,1ra gen GWAS,"Willer CJ, et al. Nat Genet, 2009."
+TMEM18,rs7561317,,A,11%,,G,1ra gen GWAS,"Thorleifsson G, et al. Nat Genet, 2009."
+TNKS/MSRA,rs17150703,,A,14%,*,G,GWAS,"Sherag A, et al. Plos Genet, 2010. "
+TNN13K,rs1514175,,G,36%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+UCP1,rs1800592,-3826A/G,C,47%,,,,
+UCP2,rs659366,,T,45%,*,,,
+UCP3,rs1800849,,A,13%,,,,
+ZNF608,rs4836133,,C,23%,,,3ra gen GWAs,"Speliotes, et al. Nat Genet, 2010."
+,,,,,,,,
+,,,,,,,,
+,,,,,,,Mismo bloque DL ,
+,,,,,,,SNPs candela ,
+,,,,,,,SNPs ligamiento-asociacion familias,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+"Willer CJ, et al. Six new loci associated with body mass index highlight a neuronal influence on body weight regulation. Nat Genet, 2009.",,,,,,,,
+"Dina C, et al. Variation in FTO contributes to childhood obesity and severe adult obesity. Nat Genet, 2007.",,,,,,,,
+"Frayling TM, et al. A common variant in the FTO gene is associated with body mass index and predisposes to childhood and adult obesity. Science, 2007.",,,,,,,,
+"Loos RJ, et al. Common variants near MC4R are associated with fat mass, weight and risk of obesity. Nat Genet, 2008.",,,,,,,,
+"Meyre D, et al. Genome-wide association study for early-onset and morbid adult obesity identifies three new risk loci in European populations. Nat Genet, 2009.",,,,,,,,
+"Kilpeläinen TO, et al. Genetic variation near IRS1 associates with reduced adiposity and an impaired metabolic profile. Nat Genet, 2011.",,,,,,,,
+"Thorleifsson G, et al. Genome-wide association yields new sequence variants at seven loci that associate with measures of obesity. Nat Genet, 2009.",,,,,,,,
